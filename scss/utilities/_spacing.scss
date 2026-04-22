@@ -1,0 +1,29 @@
+// src/scss/utilities/_spacing.scss
+@use "sass:meta";
+@use "../abstracts/variables" as v;
+
+// Generar utilidades para Margin (m) y Padding (p)
+@each $prop-key, $prop-name in ("m": "margin", "p": "padding") {
+  @each $side-key, $side-name in v.$an-sides {
+    @each $size-key, $size-value in v.$an-spacings {
+      .an-#{$prop-key}#{$side-key}-#{$size-key} {
+        @if meta.type-of($side-name) == "list" {
+          @each $side in $side-name {
+            #{$prop-name}#{$side}: $size-value !important;
+          }
+        } @else {
+          #{$prop-name}#{$side-name}: $size-value !important;
+        }
+      }
+    }
+  }
+}
+
+// Utilidad extra para centrado automático
+.an-m-auto {
+  margin: auto !important;
+}
+.an-mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}

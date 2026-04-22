@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Anami UI - Lab</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Outfit+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Outfit+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module">
+      import "./scss/main.scss";
+    </script>
+  </head>
+  <body style="padding: 50px">
+    <main class="an-container an-section--padding">
+
+        <section class="an-container an-section--padding" style="max-width: 65rem;">
+  
+  <h2 class="an-text--h2 an-mb-6">Preguntas Frecuentes</h2>
+
+  <div class="an-accordion">
+    <div class="an-accordion__item an-accordion__item--open">
+      <button class="an-accordion__header">
+        <span class="an-accordion__title">¿Debo llevar algo especial a mi cita?</span>
+        <div class="an-accordion__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </button>
+      <div class="an-accordion__content">
+        <p class="an-text--body">No es necesario traer nada. En Anami te proporcionamos todo lo necesario para tu comodidad durante la sesión.</p>
+      </div>
+    </div>
+
+    <div class="an-accordion__item">
+      <button class="an-accordion__header">
+        <span class="an-accordion__title">¿Cuál es su política de cancelación?</span>
+        <div class="an-accordion__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </button>
+      <div class="an-accordion__content">
+        <p class="an-text--body">Puedes cancelar hasta 24 horas antes sin cargos adicionales.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="an-divider an-divider--text an-my-10">
+    <span>Otras consultas</span>
+  </div>
+
+  <div class="an-text--center">
+    <button class="an-button an-button--outline">Contáctanos por WhatsApp</button>
+  </div>
+
+</section>
+
+<section class="an-container an-py-10">
+  
+  <div class="an-card an-p-6 an-mb-4">
+    <h3 class="an-text--h3 an-mb-2">Ajuste de Espacios</h3>
+    <p class="an-text--body an-mb-6">
+      Este párrafo tiene un margen inferior de 24px (an-mb-6).
+    </p>
+    
+    <div style="display: flex; gap: 1rem;">
+      <button class="an-button">Botón Normal</button>
+      <button class="an-button an-button--outline an-ml-2">Botón con ML</button>
+    </div>
+  </div>
+
+  <div class="an-alert an-alert--info an-mt-8">
+    Esta alerta tiene un margen superior de 48px.
+  </div>
+
+</section>
+
+
+        <section class="an-container an-section--padding">
+  
+  <h2 class="an-text--h2" style="margin-bottom: 3.2rem;">Escala de Botones</h2>
+
+  <div style="display: flex; flex-direction: column; gap: 2.4rem; align-items: flex-start;">
+    
+    <div>
+        <span class="an-text--subtitle">Small (sm)</span>
+        <button class="an-button an-button--sm">Pequeño</button>
+    </div>
+
+    <div>
+        <span class="an-text--subtitle">Normal (Default)</span>
+        <button class="an-button">Tamaño Estándar</button>
+    </div>
+
+    <div>
+        <span class="an-text--subtitle">Large (lg)</span>
+        <button class="an-button an-button--lg an-button--success">Confirmar Reserva</button>
+    </div>
+
+    <div>
+        <span class="an-text--subtitle">Extra Large (xl)</span>
+        <button class="an-button an-button--xl">¡Agendar Ahora!</button>
+    </div>
+
+    <div>
+        <span class="an-text--subtitle">Double Extra Large (xxl)</span>
+        <button class="an-button an-button--xxl an-button--outline">Ver Catálogo Completo</button>
+    </div>
+
+  </div>
+</section>
+
+
+        <section class="an-container an-section--padding" style="max-width: 70rem;">
+  
+  <h2 class="an-text--h2" style="margin-bottom: 3.2rem;">Variaciones de Alertas</h2>
+
+  <div class="an-alert">
+    <div class="an-alert__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="an-alert__content">Esta es una alerta de la marca Anami.</div>
+    <button class="an-alert__close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+  </div>
+
+  <div class="an-alert an-alert--success">
+    <div class="an-alert__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+    <div class="an-alert__content">¡Éxito! Tu reserva ha sido confirmada correctamente.</div>
+  </div>
+
+  <div class="an-alert an-alert--info">
+    <div class="an-alert__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+    </div>
+    <div class="an-alert__content">Recuerda llegar 10 minutos antes de tu sesión.</div>
+  </div>
+
+  <div class="an-alert an-alert--warning">
+    <div class="an-alert__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+    </div>
+    <div class="an-alert__content">Tu sesión expirará pronto. Por favor completa el pago.</div>
+  </div>
+
+  <div class="an-alert an-alert--error">
+    <div class="an-alert__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+    </div>
+    <div class="an-alert__content">Error: No se pudo conectar con el servidor de reservas.</div>
+  </div>
+
+</section>
+
+
+        <section class="an-container an-section--padding">
+
+  <div class="an-card" style="margin-top: 4rem;">
+    <div style="display: flex; gap: 1.6rem; align-items: center; margin-bottom: 2rem;">
+        <span class="an-skeleton an-skeleton--circle" style="width: 5rem; height: 5rem;"></span>
+        <div style="flex: 1;">
+            <span class="an-skeleton an-skeleton--title" style="margin-bottom: 1rem;"></span>
+            <span class="an-skeleton an-skeleton--text" style="width: 40%;"></span>
+        </div>
+    </div>
+    <span class="an-skeleton an-skeleton--text"></span>
+    <span class="an-skeleton an-skeleton--text"></span>
+    <span class="an-skeleton an-skeleton--text" style="width: 80%;"></span>
+  </div>
+
+</section>
+
+
+
+        <section class="an-container an-section--padding">
+  
+  <div class="an-table an-table--resizable">
+    
+    <div class="an-table__header">
+      <div class="an-table__header-cell col-sm">ID</div>
+      <div class="an-table__header-cell col-lg">Cliente</div>
+      <div class="an-table__header-cell">Servicio</div>
+      <div class="an-table__header-cell">Estado</div>
+      <div class="an-table__header-cell">Acción</div>
+    </div>
+
+    <div class="an-table__row">
+      <div class="an-table__cell col-sm" data-label="ID">#001</div>
+      <div class="an-table__cell col-lg" data-label="Cliente">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="width: 3rem; height: 3rem; background: #e8d3cd; border-radius: 50%;"></div>
+          <span>Sebastian Ikeda</span>
+        </div>
+      </div>
+      <div class="an-table__cell" data-label="Servicio">Masaje Sueco</div>
+      <div class="an-table__cell" data-label="Estado">
+        <span class="an-pill an-pill--success">Confirmado</span>
+      </div>
+      <div class="an-table__cell" data-label="Acción">
+        <button class="an-button" style="padding: 0.6rem 1.2rem; font-size: 1.2rem;">Editar</button>
+      </div>
+    </div>
+
+    <div class="an-table__row">
+      <div class="an-table__cell col-sm" data-label="ID">#002</div>
+      <div class="an-table__cell col-lg" data-label="Cliente">
+        <span>Marcela Paz</span>
+      </div>
+      <div class="an-table__cell" data-label="Servicio">Drenaje Linfático</div>
+      <div class="an-table__cell" data-label="Estado">
+        <span class="an-pill an-pill--warning">Pendiente</span>
+      </div>
+      <div class="an-table__cell" data-label="Acción">
+        <a href="#" class="an-text--link">Ver detalle</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+        <section class="an-container an-section--padding">
+  
+  <div class="an-card">
+    <h3 class="an-text--h3" style="margin-bottom: 2.4rem;">Estados de Servicio</h3>
+    
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.2rem;">
+      <span class="an-pill">Nuevo</span>
+      <span class="an-pill an-pill--success">Confirmado</span>
+      <span class="an-pill an-pill--info">En camino</span>
+      <span class="an-pill an-pill--warning">Pendiente</span>
+      <span class="an-pill an-pill--danger">Cancelado</span>
+    </div>
+
+    <h3 class="an-text--h3" style="margin-bottom: 2.4rem;">Píldoras con Énfasis</h3>
+
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <span class="an-pill an-pill--solid">Oferta</span>
+      <span class="an-pill an-pill--solid an-pill--success">Pagado</span>
+      <span class="an-pill an-pill--solid an-pill--danger">Urgente</span>
+    </div>
+  </div>
+
+  <div class="an-card" style="margin-top: 3.2rem; padding: 0; overflow: hidden;">
+    <div class="an-cell">
+        <div class="an-cell__content">
+            <span class="an-cell__title">Cita de Masaje Sueco</span>
+            <span class="an-cell__description">24 de Abril, 15:00</span>
+        </div>
+        <div class="an-cell__trailing">
+            <span class="an-pill an-pill--success">Confirmada</span>
+        </div>
+    </div>
+  </div>
+
+</section>
+
+      <div class="an-grid an-grid--responsive">
+        <div class="test-block">
+          <h2 class="an-text--h2">Acciones Principales</h2>
+          <p class="an-text--body">Prueba de botones con metodología BEM:</p>
+          <p class="an-text--subtitle">Masoterapeuta Certificada</p>
+          <span class="an-text--signature">Anette L.</span>
+          <a href="#" class="an-text--link">
+            Leer artículo
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem">
+            <button class="an-button">Agendar Cita</button>
+            <button class="an-button an-button--outline">Ver Servicios</button>
+          </div>
+        </div>
+
+        <div class="test-block">
+          <h1 class="an-text--h1">h1 Prueba de Grid</h1>
+          <h2 class="an-text--h2">h2 Prueba de Grid</h2>
+          <h3 class="an-text--h3">h3 Prueba de Grid</h3>
+          <p class="an-text--body">
+            Esta columna se apilará automáticamente en tablets o móviles.
+          </p>
+          <a href="#" class="an-button an-button--full">Botón Full Width</a>
+        </div>
+      </div>
+      <div class="an-container an-section--padding">
+        <h2 class="an-text--center" style="margin-bottom: 4.8rem">
+          <span class="an-text--subtitle">Servicios Destacados</span>
+          <span class="an-text--h2">Encuentra el masaje perfecto para ti</span>
+        </h2>
+
+        <div class="an-grid an-grid--responsive">
+          <article class="an-card an-card--hover">
+            <div class="an-card__header">
+              <h4 class="an-card__title">Masaje Descontracturante</h4>
+              <span class="an-card__duration">60 min</span>
+            </div>
+            <p class="an-card__description">
+              Técnica profunda para liberar tensiones musculares crónicas.
+            </p>
+            <div class="an-card__price">$45.000</div>
+          </article>
+          <article class="an-card an-card--hover">
+            <div class="an-card__header">
+              <h4 class="an-card__title">Masaje Descontracturante</h4>
+              <span class="an-card__duration">60 min</span>
+            </div>
+            <p class="an-card__description">
+              Técnica profunda para liberar tensiones musculares crónicas.
+            </p>
+            <div class="an-card__price">$45.000</div>
+          </article>
+          <article class="an-card an-card--hover">
+            <div class="an-card__header">
+              <h4 class="an-card__title">Masaje Descontracturante</h4>
+              <span class="an-card__duration">60 min</span>
+            </div>
+            <p class="an-card__description">
+              Técnica profunda para liberar tensiones musculares crónicas.
+            </p>
+            <div class="an-card__price">$45.000</div>
+          </article>
+          <article class="an-card an-card--hover">
+            <div class="an-card__header">
+              <h4 class="an-card__title">Masaje Descontracturante</h4>
+              <span class="an-card__duration">60 min</span>
+            </div>
+            <p class="an-card__description">
+              Técnica profunda para liberar tensiones musculares crónicas.
+            </p>
+            <div class="an-card__price">$45.000</div>
+          </article>
+        </div>
+      </div>
+      <!-- FORMULARIO -->
+      <section
+        class="an-container an-section--padding"
+        style="max-width: 50rem"
+      >
+        <div class="an-card">
+          <div class="">
+    
+            <div class="an-field an-field--success">
+            <label class="an-field__label">Nombre de usuario</label>
+            <input class="an-field__input" type="text" value="ikedadev_admin">
+            <span class="an-field__feedback-message">¡El nombre de usuario está disponible!</span>
+            </div>
+
+            <div class="an-field an-field--warning">
+            <label class="an-field__label">Contraseña</label>
+            <input class="an-field__input" type="password" value="12345">
+            <span class="an-field__feedback-message">La contraseña es demasiado débil.</span>
+            </div>
+
+            <div class="an-field an-field--info">
+            <label class="an-field__label">Código Promocional</label>
+            <input class="an-field__input" type="text" placeholder="ANAMI2024">
+            <span class="an-field__feedback-message">Aplica 20% de descuento en masajes suecos.</span>
+            </div>
+
+  </div>
+          <!-- CHECKBOXS -->
+          <h3 class="an-text--h3" style="margin-bottom: 2.4rem">
+            Preferencias de tu cita
+          </h3>
+
+          <label class="an-checkbox">
+            <input type="checkbox" class="an-checkbox__input" checked />
+            <span class="an-checkbox__box"></span>
+            <span class="an-checkbox__label"
+              >Recibir recordatorio por WhatsApp</span
+            >
+          </label>
+
+          <br />
+
+          <label class="an-checkbox">
+            <input type="checkbox" class="an-checkbox__input" />
+            <span class="an-checkbox__box"></span>
+            <span class="an-checkbox__label"
+              >Acepto los términos y condiciones</span
+            >
+          </label>
+
+          <br />
+
+          <label class="an-checkbox an-checkbox--disabled">
+            <input type="checkbox" class="an-checkbox__input" disabled />
+            <span class="an-checkbox__box"></span>
+            <span class="an-checkbox__label"
+              >Suscripción Premium (Próximamente)</span
+            >
+          </label>
+
+
+          <!-- RADIO -->
+
+          <h3 class="an-text--h3" style="margin-bottom: 2.4rem;">Selecciona la duración</h3>
+
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      
+      <label class="an-radio">
+        <input type="radio" name="duracion" class="an-radio__input" value="30" checked>
+        <span class="an-radio__circle"></span>
+        <span class="an-radio__label">30 minutos - Masaje Exprés</span>
+      </label>
+
+      <label class="an-radio">
+        <input type="radio" name="duracion" class="an-radio__input" value="60">
+        <span class="an-radio__circle"></span>
+        <span class="an-radio__label">60 minutos - Sesión Estándar</span>
+      </label>
+
+      <label class="an-radio">
+        <input type="radio" name="duracion" class="an-radio__input" value="90">
+        <span class="an-radio__circle"></span>
+        <span class="an-radio__label">90 minutos - Relajación Total</span>
+      </label>
+
+      <label class="an-radio an-radio--disabled">
+        <input type="radio" name="duracion" class="an-radio__input" disabled>
+        <span class="an-radio__circle"></span>
+        <span class="an-radio__label">120 minutos (No disponible)</span>
+      </label>
+        </div>
+      </section>
+
+      <section class="an-container an-section--padding">
+  
+  <h2 class="an-text--h2" style="margin-bottom: 3.2rem;">Sistema de Acciones</h2>
+
+  <div style="display: flex; gap: 1.6rem; flex-wrap: wrap; margin-bottom: 4rem;">
+    <button class="an-button">Primario</button>
+    <button class="an-button an-button--success">Confirmar</button>
+    <button class="an-button an-button--warning">Atención</button>
+    <button class="an-button an-button--danger">Eliminar</button>
+  </div>
+
+  <div style="display: flex; gap: 1.6rem; flex-wrap: wrap;">
+    <button class="an-button an-button--outline">Outline Primary</button>
+    <button class="an-button an-button--outline-success">Guardado</button>
+    <button class="an-button an-button--outline-info">Más Info</button>
+    <button class="an-button an-button--outline-danger">Cancelar</button>
+  </div>
+
+</section>
+
+<section class="an-container an-section--padding" style="max-width: 60rem;">
+  
+  <div class="an-card" style="padding: 0; overflow: hidden;">
+    <div style="padding: 2.4rem;">
+        <h3 class="an-text--h3">Resumen de Servicios</h3>
+    </div>
+
+    <div class="an-cell an-cell--clickable">
+      <div class="an-cell__leading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+        </svg>
+      </div>
+      <div class="an-cell__content">
+        <span class="an-cell__title">Masaje Descontracturante</span>
+        <span class="an-cell__description">Sesión de 60 minutos</span>
+      </div>
+      <div class="an-cell__trailing">
+        <span>$45.000</span>
+      </div>
+    </div>
+
+    <div class="an-cell an-cell--success">
+      <div class="an-cell__leading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <div class="an-cell__content">
+        <span class="an-cell__title">Cita Confirmada</span>
+        <span class="an-cell__description">Mañana a las 10:30 AM</span>
+      </div>
+      <div class="an-cell__trailing">
+        <span class="an-text--link" style="font-size: 1.2rem;">Ver mapa</span>
+      </div>
+    </div>
+
+    <div class="an-cell an-cell--danger">
+      <div class="an-cell__content">
+        <span class="an-cell__title">Pago pendiente</span>
+        <span class="an-cell__description">Tu última sesión no ha sido procesada.</span>
+      </div>
+      <div class="an-cell__trailing">
+        <button class="an-button" style="padding: 0.8rem 1.6rem; font-size: 1.2rem;">Pagar</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+    </main>
+  </body>
+</html>

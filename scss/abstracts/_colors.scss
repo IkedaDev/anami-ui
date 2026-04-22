@@ -1,0 +1,29 @@
+@use "sass:map"; // <--- Indispensable al inicio
+
+$anami-colors: (
+  "text": (
+    "main": #4a403a,
+    "light": #8c817c,
+  ),
+  "bg": (
+    "body": #fffcfa,
+    "surface": #ffffff,
+    "footer": #f5f0ee,
+  ),
+  "brand": (
+    "primary": #c47f6b,
+    "secondary": #e8d3cd,
+    "blob": #f9ebe7,
+  ),
+  "feedback": (
+    "success": #2d9d78,
+    "danger": #d93025,
+    "warning": #e29547,
+    "info": #4d8fb1,
+  ),
+);
+
+@function clr($group, $variant: "main") {
+  // Usamos el módulo map.get de forma explícita
+  @return map.get(map.get($anami-colors, $group), $variant);
+}

@@ -1,0 +1,67 @@
+@use "sass:color";
+@use "../abstracts/variables" as v;
+@use "../abstracts/colors" as c;
+@use "../abstracts/mixins" as m;
+
+// --- MIXIN PARA VARIANTES ---
+@mixin pill-variant($state-color) {
+  // Fondo con 15% de opacidad del color original para un look suave
+  background-color: color.adjust($state-color, $alpha: -0.85);
+  color: $state-color;
+  border: 0.1rem solid color.adjust($state-color, $alpha: -0.7);
+}
+
+.an-pill {
+  // --- Estilos Base (Block) ---
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1.2rem; // 4px 12px
+  border-radius: v.$radius-pill; // 50px (Forma de cápsula)
+
+  // Tipografía: Pequeña pero muy legible
+  @include m.text-style(1.2rem, 600, 1, v.$font-main);
+  letter-spacing: 0.05rem;
+  white-space: nowrap;
+  transition: v.$transition-base;
+
+  // Variante Default (Brand Primary)
+  @include pill-variant(c.clr("brand", "primary"));
+
+  // --- VARIANTES SEMÁNTICAS ---
+  &--success {
+    @include pill-variant(c.clr("feedback", "success"));
+  }
+  &--danger,
+  &--error {
+    @include pill-variant(c.clr("feedback", "danger"));
+  }
+  &--warning {
+    @include pill-variant(c.clr("feedback", "warning"));
+  }
+  &--info {
+    @include pill-variant(c.clr("feedback", "info"));
+  }
+
+  // Modificador opcional: Versión sólida (para cuando necesites más énfasis)
+  &--solid {
+    color: #ffffff;
+    border-color: transparent;
+
+    &.an-pill--success {
+      background-color: c.clr("feedback", "success");
+    }
+    &.an-pill--danger {
+      background-color: c.clr("feedback", "danger");
+    }
+    &.an-pill--warning {
+      background-color: c.clr("feedback", "warning");
+    }
+    &.an-pill--info {
+      background-color: c.clr("feedback", "info");
+    }
+    &.an-pill:not([class*="--"]) {
+      background-color: c.clr("brand", "primary");
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.an-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2.4rem 0;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    border-bottom: 0.1rem solid c.clr("brand", "secondary");
+  }
+
+  // Si tiene texto en medio
+  &--text {
+    &::before {
+      margin-right: 1.6rem;
+    }
+    &::after {
+      margin-left: 1.6rem;
+    }
+
+    span {
+      @include m.text-style(1.2rem, 500, 1);
+      color: c.clr("text", "light");
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  // Variante vertical (útil para toolbars)
+  &--vertical {
+    display: inline-block;
+    width: 0.1rem;
+    height: 2.4rem;
+    background-color: c.clr("brand", "secondary");
+    margin: 0 1.6rem;
+    vertical-align: middle;
+  }
+}

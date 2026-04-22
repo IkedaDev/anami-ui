@@ -1,0 +1,35 @@
+@use "sass:map";
+@use "variables" as v;
+
+// 1. Manejo de Media Queries (Responsive)
+@mixin respond-to($breakpoint) {
+  // Verificamos si la key existe usando el módulo map
+  @if map.has-key(v.$breakpoints, $breakpoint) {
+    // Obtenemos el valor usando map.get
+    @media (max-width: map.get(v.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "El breakpoint '#{$breakpoint}' no existe en el mapa de variables.";
+  }
+}
+
+// 2. Flexbox Centralizado (Muy usado en tu código actual)
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 3. Tipografía Fluida (Opcional, pero nivel pro)
+@mixin text-style(
+  $size,
+  $weight: v.$font-weight-light,
+  $lh: 1.6,
+  $family: v.$font-main
+) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+  font-family: $family;
+}

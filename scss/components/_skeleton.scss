@@ -1,0 +1,40 @@
+@use "sass:color";
+@use "../abstracts/variables" as v;
+@use "../abstracts/colors" as c;
+
+.an-skeleton {
+  display: block;
+  height: 1.6rem;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    c.clr("brand", "blob") 25%,
+    color.adjust(c.clr("brand", "blob"), $lightness: 3%) 50%,
+    c.clr("brand", "blob") 75%
+  );
+  background-size: 200% 100%;
+  animation: loading-pulse 1.5s infinite linear;
+  border-radius: v.$radius-sm;
+
+  // Variantes de forma
+  &--circle {
+    border-radius: 50%;
+  }
+  &--title {
+    height: 3.2rem;
+    width: 60%;
+  }
+  &--text {
+    height: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+@keyframes loading-pulse {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}

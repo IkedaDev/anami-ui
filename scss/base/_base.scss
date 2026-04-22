@@ -1,0 +1,19 @@
+// src/scss/base/_base.scss
+@use "../abstracts/variables" as v;
+@use "../abstracts/colors" as c;
+
+html {
+  // El truco del 62.5%: 1rem = 10px
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  // Volvemos a 16px para el texto base (1.6rem)
+  font-size: 1.6rem;
+  font-family: v.$font-main;
+  background-color: c.clr("bg", "body");
+  color: c.clr("text", "main");
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
