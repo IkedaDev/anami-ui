@@ -12,7 +12,8 @@
   "scripts": {
     "build": "sass scss/main.scss dist/anami.css --style compressed",
     "start": "npx vite",
-    "watch": "sass scss/main.scss dist/anami.css --watch"
+    "watch": "sass scss/main.scss dist/anami.css --watch",
+    "publish": "npm login && npm publish --access public"
   },
   "keywords": [
     "anami",
