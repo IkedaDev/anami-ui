@@ -1,6 +1,6 @@
 {
   "name": "@ikedadev/anami-ui",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Anami UI Design System - Core SCSS & Components",
   "main": "dist/anami.css",
   "style": "dist/anami.css",
@@ -11,7 +11,8 @@
   ],
   "scripts": {
     "build": "sass scss/main.scss dist/anami.css --style compressed",
-    "dev": "sass scss/main.scss dist/anami.css --watch"
+    "start": "npx vite",
+    "watch": "sass scss/main.scss dist/anami.css --watch"
   },
   "keywords": [
     "anami",

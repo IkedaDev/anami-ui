@@ -29,7 +29,7 @@ body {
 
   // Título de nivel 1
   &--h1 {
-    @include m.text-style(4rem, v.$font-weight-light, 1.2, v.$font-main);
+    @include m.text-style(5rem, v.$font-weight-light, 1.2, v.$font-main);
 
     @include m.respond-to("tablet") {
       font-size: 4rem;
@@ -38,13 +38,28 @@ body {
 
   // Título de nivel 2 (Secciones)
   &--h2 {
-    @include m.text-style(2rem, v.$font-weight-light, 1.3, v.$font-main);
+    @include m.text-style(4rem, v.$font-weight-light, 1.2, v.$font-main);
+
+    @include m.respond-to("tablet") {
+      font-size: 3rem;
+    }
   }
 
   // Título de nivel 3 (Tarjetas/Componentes)
   &--h3 {
-    // Mantenemos un peso algo más definido para legibilidad en tamaños pequeños
-    @include m.text-style(1.5rem, v.$font-weight-regular, 1.4, v.$font-main);
+    @include m.text-style(3rem, v.$font-weight-light, 1.2, v.$font-main);
+
+    @include m.respond-to("tablet") {
+      font-size: 2rem;
+    }
+  }
+
+  &--h4 {
+    @include m.text-style(2.5rem, v.$font-weight-light, 1.2, v.$font-main);
+
+    @include m.respond-to("tablet") {
+      font-size: 1.8rem;
+    }
   }
 
   // Etiqueta superior sutil
