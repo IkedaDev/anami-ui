@@ -22,6 +22,59 @@
   <body style="padding: 50px">
     <main class="an-container an-section--padding">
 
+<section class="an-container an-section--padding">
+  
+  <div class="an-table">
+    </div>
+
+
+    
+
+
+<section class="an-container an-section--padding">
+  
+  <section class="an-container an-section--padding">
+  
+  <div style="display: flex; justify-content: flex-end; width: 100%;">
+    <nav class="an-pagination" aria-label="Navegación de tabla">
+  
+  <div class="an-pagination__info">
+    Página <span>3</span> de <span>12</span>
+  </div>
+
+  <ul class="an-pagination__list">
+    <li>
+      <button class="an-pagination__link" title="Primera página">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
+      </button>
+    </li>
+
+    <li><button class="an-pagination__link">1</button></li>
+    <li><button class="an-pagination__link">2</button></li>
+    <li><button class="an-pagination__link an-pagination__link--active">3</button></li>
+    <li><button class="an-pagination__link">4</button></li>
+
+    <li>
+      <button class="an-pagination__link an-pagination__link--text">
+        <!-- Siguiente -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </li>
+
+    <li>
+      <button class="an-pagination__link" title="Última página">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+      </button>
+    </li>
+  </ul>
+
+</nav>
+  </div>
+
+</section>
+
+  
+
         <section class="an-container an-section--padding" style="max-width: 65rem;">
   
   <h2 class="an-text--h2 an-mb-6">Preguntas Frecuentes</h2>
@@ -353,97 +406,40 @@
         </div>
       </div>
       <!-- FORMULARIO -->
-      <section
-        class="an-container an-section--padding"
-        style="max-width: 50rem"
-      >
-        <div class="an-card">gf
-          <div class="">
-    
-            <div class="an-field an-field--success">
-            <label class="an-field__label">Nombre de usuario</label>
-            <input class="an-field__input" type="text" value="ikedadev_admin">
-            <span class="an-field__feedback-message">¡El nombre de usuario está disponible!</span>
-            </div>
+      <section class="an-container an-section--padding" style="max-width: 40rem;">
+  
+  <h3 class="an-text--h3 an-mb-6">Formulario con Iconos</h3>
 
-            <div class="an-field an-field--warning">
-            <label class="an-field__label">Contraseña</label>
-            <input class="an-field__input" type="password" value="12345">
-            <span class="an-field__feedback-message">La contraseña es demasiado débil.</span>
-            </div>
-
-            <div class="an-field an-field--info">
-            <label class="an-field__label">Código Promocional</label>
-            <input class="an-field__input" type="text" placeholder="ANAMI2024">
-            <span class="an-field__feedback-message">Aplica 20% de descuento en masajes suecos.</span>
-            </div>
-
+  <div class="an-field an-field--has-icon-start an-mb-4">
+    <label class="an-field__label">Correo Electrónico</label>
+    <div class="an-field__input-wrapper">
+      <div class="an-field__icon an-field__icon--start">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      </div>
+      <input type="email" class="an-field__input" placeholder="ejemplo@anami.cl">
+    </div>
   </div>
-          <!-- CHECKBOXS -->
-          <h3 class="an-text--h3" style="margin-bottom: 2.4rem">
-            Preferencias de tu cita
-          </h3>
 
-          <label class="an-checkbox">
-            <input type="checkbox" class="an-checkbox__input" checked />
-            <span class="an-checkbox__box"></span>
-            <span class="an-checkbox__label"
-              >Recibir recordatorio por WhatsApp</span
-            >
-          </label>
+  <div class="an-field an-field--has-icon-end an-mb-4">
+    <label class="an-field__label">Contraseña</label>
+    <div class="an-field__input-wrapper">
+      <input type="password" class="an-field__input" placeholder="••••••••">
+      <div class="an-field__icon an-field__icon--end" style="pointer-events: auto; cursor: pointer;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+      </div>
+    </div>
+  </div>
 
-          <br />
+  <div class="an-field an-field--has-icon-start">
+    <div class="an-field__input-wrapper">
+      <div class="an-field__icon an-field__icon--start">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </div>
+      <input type="text" class="an-field__input" placeholder="Buscar cliente...">
+    </div>
+  </div>
 
-          <label class="an-checkbox">
-            <input type="checkbox" class="an-checkbox__input" />
-            <span class="an-checkbox__box"></span>
-            <span class="an-checkbox__label"
-              >Acepto los términos y condiciones</span
-            >
-          </label>
-
-          <br />
-
-          <label class="an-checkbox an-checkbox--disabled">
-            <input type="checkbox" class="an-checkbox__input" disabled />
-            <span class="an-checkbox__box"></span>
-            <span class="an-checkbox__label"
-              >Suscripción Premium (Próximamente)</span
-            >
-          </label>
-
-
-          <!-- RADIO -->
-
-          <h3 class="an-text--h3" style="margin-bottom: 2.4rem;">Selecciona la duración</h3>
-
-    <div style="display: flex; flex-direction: column; gap: 1rem;">
-      
-      <label class="an-radio">
-        <input type="radio" name="duracion" class="an-radio__input" value="30" checked>
-        <span class="an-radio__circle"></span>
-        <span class="an-radio__label">30 minutos - Masaje Exprés</span>
-      </label>
-
-      <label class="an-radio">
-        <input type="radio" name="duracion" class="an-radio__input" value="60">
-        <span class="an-radio__circle"></span>
-        <span class="an-radio__label">60 minutos - Sesión Estándar</span>
-      </label>
-
-      <label class="an-radio">
-        <input type="radio" name="duracion" class="an-radio__input" value="90">
-        <span class="an-radio__circle"></span>
-        <span class="an-radio__label">90 minutos - Relajación Total</span>
-      </label>
-
-      <label class="an-radio an-radio--disabled">
-        <input type="radio" name="duracion" class="an-radio__input" disabled>
-        <span class="an-radio__circle"></span>
-        <span class="an-radio__label">120 minutos (No disponible)</span>
-      </label>
-        </div>
-      </section>
+</section>
 
       <section class="an-container an-section--padding">
   

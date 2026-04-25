@@ -7,83 +7,77 @@
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  margin-bottom: 2.4rem;
   width: 100%;
 
   &__label {
-    @include m.text-style(1.3rem, 500, 1, v.$font-main);
+    @include m.text-style(1.4rem, 600, 1);
     color: c.clr("text", "main");
-    transition: color 0.3s ease;
+  }
+
+  // --- NUEVO: Contenedor para Input + Iconos ---
+  &__input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
   }
 
   &__input {
     width: 100%;
-    padding: 1.4rem 2rem;
-    background-color: c.clr("bg", "surface");
+    padding: 1.2rem 1.6rem;
     border: 0.15rem solid c.clr("brand", "secondary");
     border-radius: v.$radius-md;
-    font-family: v.$font-main;
-    font-size: 1.6rem;
+    background-color: c.clr("bg", "surface");
+    @include m.text-style(1.5rem, 400, 1);
+    transition: v.$transition-base;
     color: c.clr("text", "main");
-    transition: all 0.3s ease;
-    outline: none;
-
-    @include m.respond-to("tablet") {
-      padding: 1.2rem 1.6rem;
-      font-size: 1.2rem;
-    }
 
     &::placeholder {
-      color: color.adjust(c.clr("text", "light"), $alpha: -0.4);
+      color: c.clr("text", "light");
+      opacity: 0.6;
     }
 
     &:focus {
+      outline: none;
       border-color: c.clr("brand", "primary");
       box-shadow: 0 0 0 0.4rem
         color.adjust(c.clr("brand", "primary"), $alpha: -0.9);
     }
-  }
 
-  // --- Nuevo Elemento: Mensaje de Error ---
-  &__feedback-message {
-    @include m.text-style(1.2rem, 400, 1.2, v.$font-main);
-    margin-top: 0.4rem;
-    display: none;
-  }
+    // Ajuste de padding si hay iconos
+    .an-field--has-icon-start & {
+      padding-left: 4.4rem; // Espacio para el icono izquierdo
+    }
 
-  @mixin field-state($state-color) {
-    .an-field__label {
-      color: $state-color;
-    }
-    .an-field__input {
-      border-color: $state-color;
-      background-color: color.adjust(
-        $state-color,
-        $lightness: 45%,
-        $alpha: -0.95
-      );
-      &:focus {
-        box-shadow: 0 0 0 0.4rem color.adjust($state-color, $alpha: -0.9);
-      }
-    }
-    .an-field__feedback-message {
-      display: block;
-      color: $state-color;
+    .an-field--has-icon-end & {
+      padding-right: 4.4rem; // Espacio para el icono derecho
     }
   }
 
-  // --- MODIFICADORES DE ESTADO SEMÁNTICOS ---
-  &--success {
-    @include field-state(c.clr("feedback", "success"));
-  }
-  &--danger,
-  &--error {
-    @include field-state(c.clr("feedback", "danger"));
-  }
-  &--warning {
-    @include field-state(c.clr("feedback", "warning"));
-  }
-  &--info {
-    @include field-state(c.clr("feedback", "info"));
+  // --- NUEVO: Elemento Icono ---
+  &__icon {
+    position: absolute;
+    @include m.flex-center;
+    width: 4rem;
+    height: 100%;
+    color: c.clr("text", "light");
+    pointer-events: none; // Para que no bloquee el click en el input
+    transition: v.$transition-base;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &--start {
+      left: 0.4rem;
+    }
+    &--end {
+      right: 0.4rem;
+    }
+
+    // Cambiar color cuando el input tiene foco
+    .an-field__input:focus ~ & {
+      color: c.clr("brand", "primary");
+    }
   }
 }

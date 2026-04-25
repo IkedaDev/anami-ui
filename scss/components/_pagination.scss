@@ -1,0 +1,83 @@
+// src/scss/components/_pagination.scss
+@use "sass:color";
+@use "../abstracts/variables" as v;
+@use "../abstracts/colors" as c;
+@use "../abstracts/mixins" as m;
+
+.an-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2.4rem; // Un poco más de espacio entre la info y los botones
+  padding: 1.6rem 0;
+  width: 100%;
+
+  @include m.respond-to("tablet") {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    @include m.flex-center;
+    min-width: 3.2rem; // Cambiado de width a min-width
+    height: 3.2rem;
+    padding: 0 0.8rem; // Agregamos padding horizontal para el texto
+    border-radius: v.$radius-sm;
+    background-color: transparent;
+    border: none;
+    color: c.clr("text", "light");
+    @include m.text-style(1.3rem, 500, 1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    gap: 0.8rem; // Espacio entre icono y texto si existen ambos
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      stroke-width: 2.5;
+    }
+
+    &:hover:not(&--active):not(&--disabled) {
+      background-color: color.adjust(c.clr("brand", "blob"), $alpha: -0.5);
+      color: c.clr("brand", "primary");
+    }
+
+    &--active {
+      background-color: c.clr("brand", "primary");
+      color: #ffffff;
+      font-weight: 600;
+      cursor: default;
+    }
+
+    &--disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    // Estilo especial para los botones de texto (Siguiente/Última)
+    &--text {
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+  }
+
+  &__info {
+    @include m.text-style(1.3rem, 400, 1);
+    color: c.clr("text", "light");
+    span {
+      font-weight: 600;
+      color: c.clr("text", "main");
+    }
+  }
+}
