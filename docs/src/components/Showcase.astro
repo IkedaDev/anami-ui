@@ -1,0 +1,33 @@
+---
+// docs/src/components/Showcase.astro
+const { htmlCode } = Astro.props;
+---
+<div class="an-showcase-wrapper">
+  <div class="an-scaling-container">
+    <Fragment set:html={htmlCode} />
+  </div>
+</div>
+
+<style>
+  .an-showcase-wrapper {
+    border: 1px solid var(--sl-color-gray-5);
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .an-scaling-container {
+    /* Forzamos a que el contenedor use el tamaño original pero escalado */
+    transform: scale(0.625); 
+    transform-origin: center center;
+    width: 160%; /* Compensamos el ancho para que no se vea minúsculo */
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+</style>

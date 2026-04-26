@@ -1,0 +1,109 @@
+---
+title: Botones
+description: Guía completa de uso del componente an-button de Anami UI.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+Los botones son los elementos fundamentales para la interacción del usuario. En **Anami UI**, están diseñados siguiendo una jerarquía visual clara y una escala tipográfica basada en 10px.
+
+## Uso Básico
+
+Para crear un botón estándar, utiliza la clase base `.an-button`.
+
+<Showcase
+  htmlCode={`
+    <button class="an-button">Botón Primario</button>
+  `}
+/>
+
+```html
+<button class="an-button">Botón Primario</button>
+```
+
+## Tamaños
+
+Contamos con una escala extensa para adaptarse a cualquier contexto, desde micro-acciones hasta llamadas a la acción (CTA) masivas.
+
+<Showcase
+  htmlCode={`
+  <button class="an-button an-button--sm">Pequeño (sm)</button> 
+  <button class="an-button">Normal</button> 
+  <button class="an-button an-button--lg">Grande (lg)</button> 
+  <button class="an-button an-button--xl">Extra Grande (xl)</button> 
+  <button class="an-button an-button--xxl">Gigante (xxl)</button>
+  `}
+/>
+
+```html
+<button class="an-button an-button--sm">Small</button>
+<button class="an-button an-button--lg">Large</button>
+<button class="an-button an-button--xl">Extra Large</button>
+<button class="an-button an-button--xxl">XXL</button>
+```
+
+## Variantes Semánticas
+
+Utiliza las variantes de color para comunicar el significado de la acción de forma rápida.
+
+<Showcase
+  htmlCode={`
+<button class="an-button">Primario</button> 
+<button class="an-button an-button--success">Éxito / Confirmar</button>
+<button class="an-button an-button--danger">Peligro / Eliminar</button>
+`}
+/>
+
+```html
+<button class="an-button an-button--success">Confirmar</button>
+<button class="an-button an-button--danger">Eliminar</button>
+```
+
+## Estilo Outline
+
+Si necesitas un botón con menor peso visual, utiliza el modificador --outline
+
+<Showcase
+  htmlCode={`
+<button class="an-button an-button--outline">Outline Primario</button> 
+<button class="an-button an-button--outline an-button--success">Outline Éxito</button> 
+<button class="an-button an-button--outline an-button--danger">Outline Peligro</button>
+`}
+/>
+
+```html
+<button class="an-button an-button--outline">Botón Outline</button>
+```
+
+## Botones con Iconos
+
+<Showcase
+  htmlCode={`
+<button class="an-button an-button--danger">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></svg>
+  Eliminar Registro
+</button>
+`}
+/>
+
+```html
+<button class="an-button">
+  <svg>...</svg>
+  Texto del Botón
+</button>
+```
+
+## Estados
+
+El botón maneja automáticamente los estados de hover, active y disabled.
+
+<Showcase
+  htmlCode={`
+<button class="an-button" disabled>Botón Deshabilitado</button> 
+<button class="an-button an-button--outline" disabled>Outline Deshabilitado</button>
+`}
+/>
+
+```html
+<button class="an-button" disabled>No disponible</button>
+```
