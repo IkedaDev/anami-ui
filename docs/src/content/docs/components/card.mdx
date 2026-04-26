@@ -1,0 +1,42 @@
+---
+title: Cards
+description: Guía completa de uso del componente an-card de Anami UI.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+## Uso Basico
+
+<Showcase
+  htmlCode={`
+    <article class="an-card">
+            <div class="an-card__header">
+              <h4 class="an-card__title">Masaje Descontracturante</h4>
+              <span class="an-card__duration">60 min</span>
+            </div>
+            <p class="an-card__description">
+              Técnica profunda para liberar tensiones musculares crónicas.
+            </p>
+            <div class="an-card__price">$45.000</div>
+          </article>
+  `}
+/>
+
+## Hover
+
+Uso de la clase `an-card--hover`
+
+<Showcase
+  htmlCode={`
+    <article class="an-card an-card--hover">
+            <div class="an-card__header ">
+              <h4 class="an-card__title">Masaje Descontracturante</h4>
+              <span class="an-card__duration">60 min</span>
+            </div>
+            <p class="an-card__description">
+              Técnica profunda para liberar tensiones musculares crónicas.
+            </p>
+            <div class="an-card__price">$45.000</div>
+          </article>
+  `}
+/>

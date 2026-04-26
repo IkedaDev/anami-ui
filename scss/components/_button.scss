@@ -30,7 +30,12 @@
 }
 
 .an-button {
-  display: inline-block;
+  // Cambio a inline-flex para alinear iconos y texto
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem; // Espacio estándar entre icono y texto
+  font-family: v.$font-main;
   padding: 1.2rem 3.2rem;
   background-color: c.clr("brand", "primary");
   color: white;
@@ -42,12 +47,48 @@
   transition: v.$transition-base;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(196, 127, 107, 0.2); //
+  box-shadow: 0 4px 10px rgba(196, 127, 107, 0.2);
+  white-space: nowrap; // Evita que el texto se rompa en dos líneas
 
   &:hover {
     background-color: color.adjust(c.clr("brand", "primary"), $lightness: -10%);
     transform: translateY(-2px);
     box-shadow: v.$shadow-hover;
+  }
+
+  // Estilos para el elemento icono (i, svg o clase .an-icon)
+  i,
+  svg,
+  .an-icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em; // El icono escala proporcionalmente al texto
+    flex-shrink: 0; // Evita que el icono se aplaste
+  }
+
+  // --- VARIANTES DE ICONO ---
+
+  // Botón circular (Solo para iconos)
+  &--icon-only {
+    padding: 0;
+    width: 3.5rem; // Tamaño base para MD
+    height: 3.5rem;
+    border-radius: 50%;
+    gap: 0;
+
+    &.an-button--sm {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+    &.an-button--lg {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+
+  // Invertir orden (Icono a la derecha)
+  &--icon-right {
+    flex-direction: row-reverse;
   }
 
   // Variante Default (Primary)

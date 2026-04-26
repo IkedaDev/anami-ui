@@ -1,0 +1,45 @@
+---
+title: Pildoras
+description: Guía completa de uso del componente an-pill de Anami UI.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+## Uso Basico
+
+<Showcase
+  htmlCode={`
+<div class="an-card">
+    <h3 class="an-text--h3" style="margin-bottom: 2.4rem;">Estados de Servicio</h3>
+    
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.2rem;">
+      <span class="an-pill">Nuevo</span>
+      <span class="an-pill an-pill--success">Confirmado</span>
+      <span class="an-pill an-pill--info">En camino</span>
+      <span class="an-pill an-pill--warning">Pendiente</span>
+      <span class="an-pill an-pill--danger">Cancelado</span>
+    </div>
+
+    <h3 class="an-text--h3" style="margin-bottom: 2.4rem;">Píldoras con Énfasis</h3>
+
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <span class="an-pill an-pill--solid">Oferta</span>
+      <span class="an-pill an-pill--solid an-pill--success">Pagado</span>
+      <span class="an-pill an-pill--solid an-pill--danger">Urgente</span>
+    </div>
+
+  </div>
+
+  <div class="an-card" style="margin-top: 3.2rem; padding: 0; overflow: hidden;">
+    <div class="an-cell">
+        <div class="an-cell__content">
+            <span class="an-cell__title">Cita de Masaje Sueco</span>
+            <span class="an-cell__description">24 de Abril, 15:00</span>
+        </div>
+        <div class="an-cell__trailing">
+            <span class="an-pill an-pill--success">Confirmada</span>
+        </div>
+    </div>
+  </div>
+`}
+/>

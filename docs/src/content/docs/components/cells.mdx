@@ -1,0 +1,60 @@
+---
+title: Celula
+description: Guía completa de uso del componente an-cell de Anami UI.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+## Uso Basico
+
+<Showcase
+  htmlCode={`
+
+  <div class="an-card" style="padding: 0; overflow: hidden;">
+    <div style="padding: 2.4rem;">
+        <h3 class="an-text--h3">Resumen de Servicios</h3>
+    </div>
+
+    <div class="an-cell an-cell--clickable">
+      <div class="an-cell__leading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+        </svg>
+      </div>
+      <div class="an-cell__content">
+        <span class="an-cell__title">Masaje Descontracturante</span>
+        <span class="an-cell__description">Sesión de 60 minutos</span>
+      </div>
+      <div class="an-cell__trailing">
+        <span>$45.000</span>
+      </div>
+    </div>
+
+    <div class="an-cell an-cell--success">
+      <div class="an-cell__leading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <div class="an-cell__content">
+        <span class="an-cell__title">Cita Confirmada</span>
+        <span class="an-cell__description">Mañana a las 10:30 AM</span>
+      </div>
+      <div class="an-cell__trailing">
+        <span class="an-text--link" style="font-size: 1.2rem;">Ver mapa</span>
+      </div>
+    </div>
+
+    <div class="an-cell an-cell--danger">
+      <div class="an-cell__content">
+        <span class="an-cell__title">Pago pendiente</span>
+        <span class="an-cell__description">Tu última sesión no ha sido procesada.</span>
+      </div>
+      <div class="an-cell__trailing">
+        <button class="an-button" style="padding: 0.8rem 1.6rem; font-size: 1.2rem;">Pagar</button>
+      </div>
+    </div>
+
+  </div>
+  `}
+/>

@@ -1,0 +1,45 @@
+---
+title: Radio
+description: Guía completa de uso del componente an-radio de Anami UI.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+## Uso Basico
+
+<Showcase
+  htmlCode={`
+<div class="an-card">
+<h3 class="an-text--h3" style="margin-bottom: 2.4rem;">Selecciona la duración</h3>
+
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+
+      <label class="an-radio">
+        <input type="radio" name="duracion" class="an-radio__input" value="30" checked>
+        <span class="an-radio__circle"></span>
+        <span class="an-radio__label">30 minutos - Masaje Exprés</span>
+      </label>
+
+      <label class="an-radio">
+        <input type="radio" name="duracion" class="an-radio__input" value="60">
+        <span class="an-radio__circle"></span>
+        <span class="an-radio__label">60 minutos - Sesión Estándar</span>
+      </label>
+
+      <label class="an-radio">
+        <input type="radio" name="duracion" class="an-radio__input" value="90">
+        <span class="an-radio__circle"></span>
+        <span class="an-radio__label">90 minutos - Relajación Total</span>
+      </label>
+
+      <label class="an-radio an-radio--disabled">
+        <input type="radio" name="duracion" class="an-radio__input" disabled>
+        <span class="an-radio__circle"></span>
+        <span class="an-radio__label">120 minutos (No disponible)</span>
+      </label>
+        </div>
+
+</div>
+
+`}
+/>

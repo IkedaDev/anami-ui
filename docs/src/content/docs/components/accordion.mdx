@@ -1,0 +1,61 @@
+---
+title: Acordeones
+description: Guía completa de uso del componente an-accordion de Anami UI.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+## Uso Básico
+
+<Showcase
+  htmlCode={`
+   <div class="an-accordion">
+  <div class="an-accordion__item an-accordion__item--open">
+    <button class="an-accordion__header">
+      <span class="an-accordion__title"
+        >¿Debo llevar algo especial a mi cita?</span
+      >
+      <div class="an-accordion__icon">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </button>
+    <div class="an-accordion__content">
+      <p class="an-text--body">
+        No es necesario traer nada. En Anami te proporcionamos todo lo necesario
+        para tu comodidad durante la sesión.
+      </p>
+    </div>
+  </div>
+
+  <div class="an-accordion__item">
+    <button class="an-accordion__header">
+      <span class="an-accordion__title"
+        >¿Cuál es su política de cancelación?</span
+      >
+      <div class="an-accordion__icon">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </button>
+    <div class="an-accordion__content">
+      <p class="an-text--body">
+        Puedes cancelar hasta 24 horas antes sin cargos adicionales.
+      </p>
+    </div>
+  </div>
+</div>
+  `}
+/>

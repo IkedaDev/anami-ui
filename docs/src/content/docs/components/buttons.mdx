@@ -17,10 +17,6 @@ Para crear un botón estándar, utiliza la clase base `.an-button`.
   `}
 />
 
-```html
-<button class="an-button">Botón Primario</button>
-```
-
 ## Tamaños
 
 Contamos con una escala extensa para adaptarse a cualquier contexto, desde micro-acciones hasta llamadas a la acción (CTA) masivas.
@@ -35,13 +31,6 @@ Contamos con una escala extensa para adaptarse a cualquier contexto, desde micro
   `}
 />
 
-```html
-<button class="an-button an-button--sm">Small</button>
-<button class="an-button an-button--lg">Large</button>
-<button class="an-button an-button--xl">Extra Large</button>
-<button class="an-button an-button--xxl">XXL</button>
-```
-
 ## Variantes Semánticas
 
 Utiliza las variantes de color para comunicar el significado de la acción de forma rápida.
@@ -54,14 +43,9 @@ Utiliza las variantes de color para comunicar el significado de la acción de fo
 `}
 />
 
-```html
-<button class="an-button an-button--success">Confirmar</button>
-<button class="an-button an-button--danger">Eliminar</button>
-```
-
 ## Estilo Outline
 
-Si necesitas un botón con menor peso visual, utiliza el modificador --outline
+Si necesitas un botón con menor peso visual, utiliza el modificador `--outline`
 
 <Showcase
   htmlCode={`
@@ -70,10 +54,6 @@ Si necesitas un botón con menor peso visual, utiliza el modificador --outline
 <button class="an-button an-button--outline an-button--danger">Outline Peligro</button>
 `}
 />
-
-```html
-<button class="an-button an-button--outline">Botón Outline</button>
-```
 
 ## Botones con Iconos
 
@@ -86,13 +66,6 @@ Si necesitas un botón con menor peso visual, utiliza el modificador --outline
 `}
 />
 
-```html
-<button class="an-button">
-  <svg>...</svg>
-  Texto del Botón
-</button>
-```
-
 ## Estados
 
 El botón maneja automáticamente los estados de hover, active y disabled.
@@ -103,7 +76,3 @@ El botón maneja automáticamente los estados de hover, active y disabled.
 <button class="an-button an-button--outline" disabled>Outline Deshabilitado</button>
 `}
 />
-
-```html
-<button class="an-button" disabled>No disponible</button>
-```

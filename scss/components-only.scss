@@ -2,7 +2,22 @@
 @forward "abstracts/colors";
 @forward "abstracts/mixins";
 
-// Componentes (estos tienen prefijo .an- así que son seguros)
+@forward "base/typography";
+
 @forward "components/button";
+@forward "components/accordion";
+@forward "components/alert";
 @forward "components/card";
+@forward "components/cell";
+@forward "components/checkbox";
+@forward "components/divider";
+@forward "components/field";
+@forward "components/pagination";
+@forward "components/pill";
+@forward "components/radio";
+@forward "components/skeleton";
 @forward "components/table";
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Outfit+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Outfit+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&family=Outfit:wght@300;400;500&display=swap");

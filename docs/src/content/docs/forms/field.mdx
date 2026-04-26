@@ -1,0 +1,76 @@
+---
+title: Inputs
+description: Guía completa de uso del componente an-field de Anami UI.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+## Uso Basico
+
+<Showcase
+  htmlCode={`
+    <div class="an-card">
+        <div class="an-field an-field">
+            <label class="an-field__label">Nombre de usuario</label>
+            <input class="an-field__input" type="text" value="ikedadev">
+        </div>
+        <br /> 
+        <div class="an-field an-field--success">
+        <label class="an-field__label">Nombre de usuario</label>
+        <input class="an-field__input" type="text" value="ikedadev_admin">
+        <span class="an-field__feedback-message">¡El nombre de usuario está disponible!</span>
+        </div>
+        <br/>
+        <div class="an-field an-field--warning">
+        <label class="an-field__label">Contraseña</label>
+        <input class="an-field__input" type="password" value="12345">
+        <span class="an-field__feedback-message">La contraseña es demasiado débil.</span>
+        </div>
+        <br/>
+        <div class="an-field an-field--info">
+        <label class="an-field__label">Código Promocional</label>
+        <input class="an-field__input" type="text" placeholder="ANAMI2024">
+        <span class="an-field__feedback-message">Aplica 20% de descuento en masajes suecos.</span>
+        </div>
+  </div>
+
+`}
+/>
+
+<Showcase
+  htmlCode={`
+    <div class="an-card">
+
+    <div class="an-field  an-field--has-icon-start">
+        <div class="an-field__input-wrapper">
+        <div class="an-field__icon an-field__icon--start">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </div>
+        <input type="text" class="an-field__input" placeholder="Buscar cliente...">
+        </div>
+    </div>
+
+    <div class="an-field an-field--has-icon-start an-mb-4">
+        <label class="an-field__label">Correo Electrónico</label>
+        <div class="an-field__input-wrapper">
+        <div class="an-field__icon an-field__icon--start">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </div>
+        <input type="email" class="an-field__input" placeholder="ejemplo@anami.cl">
+        </div>
+    </div>
+
+    <div class="an-field an-field--has-icon-end an-mb-4">
+        <label class="an-field__label">Contraseña</label>
+        <div class="an-field__input-wrapper">
+        <input type="password" class="an-field__input" placeholder="••••••••">
+        <div class="an-field__icon an-field__icon--end">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        </div>
+        </div>
+    </div>
+
+  </div>
+
+`}
+/>

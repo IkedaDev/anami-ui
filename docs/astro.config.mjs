@@ -20,6 +20,10 @@ export default defineConfig({
           label: "Components",
           autogenerate: { directory: "components" },
         },
+        {
+          label: "Forms",
+          autogenerate: { directory: "forms" },
+        },
       ],
     }),
   ],

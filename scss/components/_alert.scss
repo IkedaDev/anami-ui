@@ -23,7 +23,7 @@
   margin-bottom: 2rem;
   position: relative;
   animation: slideIn 0.3s ease-out;
-
+  width: 100%;
   // --- Elementos (Elements) ---
   &__icon {
     display: flex; // Asegura que el icono no tenga espacios extra
@@ -37,6 +37,7 @@
   }
 
   &__content {
+    margin-top: 0;
     flex-grow: 1;
     @include m.text-style(1.4rem, 400, 1.4);
   }

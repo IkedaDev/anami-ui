@@ -1,0 +1,40 @@
+---
+title: Checkboxs
+description: Guía completa de uso del componente an-checkbox de Anami UI.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+## Uso Basico
+
+<Showcase
+  htmlCode={`
+    <div class="an-card">
+          <h3 class="an-text--h3" style="margin-bottom: 2.4rem">
+            Preferencias de tu cita
+          </h3>
+          <label class="an-checkbox">
+            <input type="checkbox" class="an-checkbox__input" checked />
+            <span class="an-checkbox__box"></span>
+            <span class="an-checkbox__label"
+              >Recibir recordatorio por WhatsApp</span
+            >
+          </label>
+          <label class="an-checkbox">
+            <input type="checkbox" class="an-checkbox__input" />
+            <span class="an-checkbox__box"></span>
+            <span class="an-checkbox__label"
+              >Acepto los términos y condiciones</span
+            >
+          </label>
+          <label class="an-checkbox an-checkbox--disabled">
+            <input type="checkbox" class="an-checkbox__input" disabled />
+            <span class="an-checkbox__box"></span>
+            <span class="an-checkbox__label"
+              >Suscripción Premium (Próximamente)</span
+            >
+          </label>
+      </div>
+
+`}
+/>

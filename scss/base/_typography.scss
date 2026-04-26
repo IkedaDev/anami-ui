@@ -5,15 +5,15 @@
 @use "../abstracts/colors" as c;
 
 // Estilos Globales y Reset de Base
-body {
-  margin: 0;
-  padding: 0;
-  font-family: v.$font-main;
-  background-color: c.clr("bg", "body");
-  color: c.clr("text", "main");
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
+// body {
+//   margin: 0;
+//   padding: 0;
+//   font-family: v.$font-main;
+//   background-color: c.clr("bg", "body");
+//   color: c.clr("text", "main");
+//   line-height: 1.6;
+//   -webkit-font-smoothing: antialiased;
+// }
 
 // Sistema de Textos BEM (Anami UI)
 .an-text {
@@ -30,7 +30,7 @@ body {
   // Título de nivel 1
   &--h1 {
     @include m.text-style(5rem, v.$font-weight-light, 1.2, v.$font-main);
-
+    color: c.clr("text", "main");
     @include m.respond-to("tablet") {
       font-size: 4rem;
     }
@@ -39,7 +39,7 @@ body {
   // Título de nivel 2 (Secciones)
   &--h2 {
     @include m.text-style(4rem, v.$font-weight-light, 1.2, v.$font-main);
-
+    color: c.clr("text", "main");
     @include m.respond-to("tablet") {
       font-size: 3rem;
     }
@@ -48,7 +48,7 @@ body {
   // Título de nivel 3 (Tarjetas/Componentes)
   &--h3 {
     @include m.text-style(3rem, v.$font-weight-light, 1.2, v.$font-main);
-
+    color: c.clr("text", "main");
     @include m.respond-to("tablet") {
       font-size: 2rem;
     }
@@ -56,7 +56,7 @@ body {
 
   &--h4 {
     @include m.text-style(2.5rem, v.$font-weight-light, 1.2, v.$font-main);
-
+    color: c.clr("text", "main");
     @include m.respond-to("tablet") {
       font-size: 1.8rem;
     }

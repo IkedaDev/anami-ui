@@ -12,7 +12,8 @@
   transition: v.$transition-base;
   gap: 1.6rem; // 16px
   width: 100%;
-
+  color: c.clr("text", "main");
+  margin: 0;
   // --- Línea divisoria (opcional por cascada) ---
   &:not(:last-child) {
     border-bottom: 0.1rem solid c.clr("brand", "secondary");
