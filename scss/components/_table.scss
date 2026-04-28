@@ -15,10 +15,6 @@
   box-shadow: v.$shadow-soft;
   margin: 1.6rem 0;
 
-  @include m.respond-to("tablet") {
-    display: flex; // Se oculta en móvil para usar el truco de etiquetas
-  }
-
   // --- Cabecera (Element) ---
   &__header {
     background-color: c.clr("brand", "blob");
