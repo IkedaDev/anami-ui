@@ -9,46 +9,45 @@ import Showcase from "../../../components/Showcase.astro";
 
 <Showcase
   htmlCode={`
-<div class="an-table an-table--resizable">
-    
-    <div class="an-table__header">
-      <div class="an-table__header-cell col-sm">ID</div>
-      <div class="an-table__header-cell col-lg">Cliente</div>
-      <div class="an-table__header-cell">Servicio</div>
-      <div class="an-table__header-cell">Estado</div>
-      <div class="an-table__header-cell">Acción</div>
-    </div>
+<table class="an-table">
+    <thead class="an-table__header">
+      <tr>
+        <th class="an-table__header-cell">Cliente</th>
+        <th class="an-table__header-cell">Servicio</th>
+        <th class="an-table__header-cell">Estado</th>
+        <th class="an-table__header-cell">Monto</th>
+        <th class="an-table__header-cell">Acción</th>
+      </tr>
+    </thead>
 
-    <div class="an-table__row">
-      <div class="an-table__cell col-sm" data-label="ID">#001</div>
-      <div class="an-table__cell col-lg" data-label="Cliente">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <span>Sebastian Ikeda</span>
-        </div>
-      </div>
-      <div class="an-table__cell" data-label="Servicio">Masaje Sueco</div>
-      <div class="an-table__cell" data-label="Estado">
-        <span class="an-pill an-pill--success">Confirmado</span>
-      </div>
-      <div class="an-table__cell" data-label="Acción">
-        <button class="an-button" style="padding: 0.6rem 1.2rem; font-size: 1.2rem;">Editar</button>
-      </div>
-    </div>
+    <tbody class="an-table__body">
 
-    <div class="an-table__row">
-      <div class="an-table__cell col-sm" data-label="ID">#002</div>
-      <div class="an-table__cell col-lg" data-label="Cliente">
-        <span>Marcela Paz</span>
-      </div>
-      <div class="an-table__cell" data-label="Servicio">Drenaje Linfático</div>
-      <div class="an-table__cell" data-label="Estado">
-        <span class="an-pill an-pill--warning">Pendiente</span>
-      </div>
-      <div class="an-table__cell" data-label="Acción">
-        <a href="#" class="an-text--link">Ver detalle</a>
-      </div>
-    </div>
+      <tr class="an-table__row">
+        <td class="an-table__cell" data-label="Cliente">Sebastian Ikeda</td>
+        <td class="an-table__cell" data-label="Servicio">Masaje Descontracturante</td>
+        <td class="an-table__cell" data-label="Estado">
+          <span class="an-pill an-pill--success">Completado</span>
+        </td>
+        <td class="an-table__cell" data-label="Monto">$45.000</td>
+        <td class="an-table__cell" data-label="Acción">
+          <button class="an-button an-button--sm">Ver Detalle</button>
+        </td>
+      </tr>
 
-  </div>
+      <tr class="an-table__row">
+        <td class="an-table__cell" data-label="Cliente">Ana María Torres</td>
+        <td class="an-table__cell" data-label="Servicio">Piedras Calientes</td>
+        <td class="an-table__cell" data-label="Estado">
+          <span class="an-pill an-pill--warning">Pendiente</span>
+        </td>
+        <td class="an-table__cell" data-label="Monto">$55.000</td>
+        <td class="an-table__cell" data-label="Acción">
+          <button class="an-button an-button--sm">Ver Detalle</button>
+        </td>
+      </tr>
+
+    </tbody>
+
+  </table>
 `}
 />

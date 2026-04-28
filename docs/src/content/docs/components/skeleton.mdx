@@ -1,23 +1,56 @@
 ---
 title: Skeleton
-description: Guía completa de uso del componente an-skeleton de Anami UI.
+description: Indicadores de carga visual para mejorar el UX percibido.
 ---
 
 import Showcase from "../../../components/Showcase.astro";
 
-## Uso Basico
+## Skeleton de Tarjeta de Usuario
+
+Este es un ejemplo de cómo combinar las clases para simular una carga de perfil.
 
 <Showcase
   htmlCode={`
-<div class="an-card" >
-    <span class="an-skeleton an-skeleton--circle" "></span>
-    <div>
-        <span class="an-skeleton an-skeleton--title" "></span>
-        <span class="an-skeleton an-skeleton--text" "></span>
+  <div style="display: flex; gap: 1.6rem; align-items: center; width: 30rem; padding: 1.6rem; border: 1px solid #eee; border-radius: 12px;">
+    <div class="an-skeleton an-skeleton--avatar"></div>
+    
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 0.8rem;">
+      <div class="an-skeleton an-skeleton--h-md an-skeleton--w-75"></div>
+      <div class="an-skeleton an-skeleton--h-xs an-skeleton--w-50"></div>
     </div>
-    <span class="an-skeleton an-skeleton--text"></span>
-    <span class="an-skeleton an-skeleton--text"></span>
-    <span class="an-skeleton an-skeleton--text" "></span>
-</div>
+  </div>
+`}
+/>
+
+---
+
+## Variantes de Tamaño
+
+Utiliza las clases `--h-` para altura y `--w-` para el ancho.
+
+<Showcase
+  htmlCode={`
+  <div style="display: flex; flex-direction: column; gap: 1.2rem; width: 100%;">
+    <div class="an-skeleton an-skeleton--h-md an-skeleton--w-25"></div>
+    <div class="an-skeleton an-skeleton--h-sm"></div>
+    <div class="an-skeleton an-skeleton--h-sm an-skeleton--w-75"></div>
+    <div class="an-skeleton an-skeleton--h-sm an-skeleton--w-50"></div>
+  </div>
+`}
+/>
+
+---
+
+## Formas Predefinidas
+
+Contamos con formas circulares para avatares e iconos, y rectangulares para bloques de contenido.
+
+<Showcase
+  htmlCode={`
+  <div style="display: flex; gap: 1.6rem;">
+    <div class="an-skeleton an-skeleton--circle an-skeleton--h-lg" style="width: 4.8rem;"></div>
+    <div class="an-skeleton an-skeleton--button"></div>
+    <div class="an-skeleton an-skeleton--rect an-skeleton--h-lg an-skeleton--w-25"></div>
+  </div>
 `}
 />
