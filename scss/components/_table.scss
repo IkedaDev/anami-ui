@@ -6,39 +6,43 @@
 .an-table {
   // --- Bloque Principal (Block) ---
   width: 100%;
+  border-collapse: separate; // Mejor que collapse para respetar border-radius
+  border-spacing: 0;
   border-radius: v.$radius-lg;
-  overflow: hidden; // Para que el border-radius se note en las esquinas
+  overflow: hidden;
   background-color: c.clr("bg", "surface");
   border: 0.1rem solid c.clr("brand", "secondary");
   box-shadow: v.$shadow-soft;
+  margin: 1.6rem 0;
 
-  // --- Cabecera (Desktop) ---
+  @include m.respond-to("tablet") {
+    display: flex; // Se oculta en móvil para usar el truco de etiquetas
+  }
+
+  // --- Cabecera (Element) ---
   &__header {
-    display: flex;
     background-color: c.clr("brand", "blob");
-    border-bottom: 0.1rem solid c.clr("brand", "secondary");
 
     @include m.respond-to("tablet") {
-      display: none; // Desaparece en móvil
+      display: none; // Se oculta en móvil para usar el truco de etiquetas
     }
   }
 
   &__header-cell {
-    flex: 1; // Distribución equitativa por defecto
     padding: 1.6rem 2.4rem;
+    text-align: left;
     @include m.text-style(1.3rem, 600, 1.2);
     color: c.clr("brand", "primary");
     text-transform: uppercase;
     letter-spacing: 0.1rem;
+    border-bottom: 0.1rem solid c.clr("brand", "secondary");
   }
 
-  // --- Fila (Row) ---
+  // --- Filas (Element) ---
   &__row {
-    display: flex;
-    transition: v.$transition-base;
-    border-bottom: 0.1rem solid c.clr("brand", "secondary");
+    transition: background-color 0.2s ease;
 
-    &:last-child {
+    &:last-child .an-table__cell {
       border-bottom: none;
     }
 
@@ -47,54 +51,42 @@
     }
 
     @include m.respond-to("tablet") {
-      flex-direction: column; // Se apila en móvil
+      display: block;
       padding: 1.6rem 0;
       border-bottom: 0.2rem solid c.clr("brand", "secondary");
-    }
-  }
 
-  // --- Celda (Cell) ---
-  &__cell {
-    flex: 1;
-    padding: 1.6rem 2.4rem;
-    display: flex;
-    align-items: center;
-    @include m.text-style(1.5rem, 400, 1.4);
-    color: c.clr("text", "main");
-
-    // Permite meter CUALQUIER COSA dentro (botones, imágenes, badges)
-    & > * {
-      max-width: 100%;
-    }
-
-    @include m.respond-to("tablet") {
-      padding: 0.8rem 2.4rem;
-      justify-content: space-between; // Texto a la izquierda, contenido a la derecha
-
-      // TRUCO PRO: Generamos el label del encabezado usando el atributo data-label del HTML
-      &::before {
-        content: attr(data-label);
-        font-weight: 600;
-        color: c.clr("brand", "primary");
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        margin-right: 1.6rem;
+      &:last-child {
+        border-bottom: none;
       }
     }
   }
 
-  // --- MODIFICADORES ---
+  // --- Celdas (Element) ---
+  &__cell {
+    padding: 1.6rem 2.4rem;
+    @include m.text-style(1.5rem, 400, 1.4);
+    color: c.clr("text", "main");
+    border-bottom: 0.1rem solid c.clr("brand", "secondary");
+    vertical-align: middle;
 
-  // Para columnas con tamaños específicos (Resizable logic)
-  &--resizable {
-    .an-table__header-cell,
-    .an-table__cell {
-      &.col-sm {
-        flex: 0 0 10rem;
-      } // 100px
-      &.col-lg {
-        flex: 2;
-      } // Doble de ancho
+    @include m.respond-to("tablet") {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 2.4rem;
+      border-bottom: none;
+      text-align: right;
+
+      // TRUCO PRO: Usamos el atributo data-label para mostrar el nombre de la columna en móvil
+      &::before {
+        content: attr(data-label);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        color: c.clr("brand", "primary");
+        margin-right: 1.6rem;
+        text-align: left;
+      }
     }
   }
 }

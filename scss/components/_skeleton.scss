@@ -3,8 +3,8 @@
 @use "../abstracts/colors" as c;
 
 .an-skeleton {
+  // --- Base ---
   display: block;
-  height: 1.6rem;
   width: 100%;
   background: linear-gradient(
     90deg,
@@ -16,17 +16,61 @@
   animation: loading-pulse 1.5s infinite linear;
   border-radius: v.$radius-sm;
 
-  // Variantes de forma
+  // --- Modificadores de Forma ---
   &--circle {
     border-radius: 50%;
+    aspect-ratio: 1 / 1;
   }
-  &--title {
-    height: 3.2rem;
-    width: 60%;
+  &--rect {
+    border-radius: v.$radius-md;
   }
-  &--text {
+  &--pill {
+    border-radius: v.$radius-pill;
+  }
+
+  // --- Modificadores de Altura (Basados en nuestra escala de 10px) ---
+  &--h-xs {
+    height: 0.8rem;
+  } // 8px
+  &--h-sm {
     height: 1.2rem;
-    margin-bottom: 0.8rem;
+  } // 12px (párrafos)
+  &--h-md {
+    height: 2.4rem;
+  } // 24px (títulos o inputs)
+  &--h-lg {
+    height: 4.8rem;
+  } // 48px (botones o avatares)
+  &--h-xl {
+    height: 12rem;
+  } // 120px (hero o imágenes)
+
+  // --- Modificadores de Ancho ---
+  &--w-25 {
+    width: 25%;
+  }
+  &--w-50 {
+    width: 50%;
+  }
+  &--w-75 {
+    width: 75%;
+  }
+  &--w-full {
+    width: 100%;
+  }
+
+  // --- Ajustes rápidos para elementos comunes ---
+  &--avatar {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  &--button {
+    height: 4rem;
+    width: 12rem;
+    border-radius: v.$radius-md;
   }
 }
 
