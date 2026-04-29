@@ -1,0 +1,81 @@
+---
+title: Card Stats
+description: Tarjetas informativas para mostrar métricas clave en el dashboard.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+Las `an-card-stats` están diseñadas para resaltar datos numéricos importantes con un acento visual basado en el color de marca de Anami.
+
+## Uso Básico
+
+Ideal para resúmenes financieros o contadores de actividad.
+
+<Showcase
+  htmlCode={`
+    <article class="an-card-stats" style="max-width: 300px">
+      <div class="an-card-stats__header">
+        <span class="an-card-stats__title">Nuevos Clientes</span>
+        <div class="an-card-stats__icon">👤</div>
+      </div>
+      <h3 class="an-card-stats__value">24</h3>
+      <div class="an-card-stats__footer">
+        <span class="an-card-stats__trend an-card-stats__trend--up">↑ 5</span>
+        <span class="an-card-stats__label">este mes</span>
+      </div>
+    </article>
+  `}
+/>
+
+---
+
+## Estados de Carga
+
+Puedes combinar este componente con el `an-skeleton` para estados asíncronos.
+
+<Showcase
+  htmlCode={`
+    <article class="an-card-stats" style="width: 400px">
+      <div class="an-card-stats__header" style="width:100%">
+        <div class="an-card-stats__title an-skeleton an-skeleton--h-md an-skeleton--w-full an-mr-5"></div>
+        <div class="an-card-stats__icon an-skeleton an-skeleton--avatar"></div>
+      </div>
+      <div class="an-card-stats__title an-skeleton an-skeleton--h-md an-skeleton--w-full an-mr-5"></div>
+      <div class="an-card-stats__footer">
+        <div class="an-card-stats__title an-skeleton an-skeleton--h-md an-skeleton--w-50"></div>
+      </div>
+    </article>
+  `}
+/>
+
+## Otros
+
+<Showcase
+  htmlCode={`
+    <div class="an-grid an-grid--3 an-gap-4">
+  <article class="an-card-stats">
+    <div class="an-card-stats__header">
+      <span class="an-card-stats__title">Ingresos Hoy</span>
+      <div class="an-card-stats__icon">👤</div>
+    </div>
+    <h3 class="an-card-stats__value">$45.500</h3>
+    <div class="an-card-stats__footer">
+      <span class="an-card-stats__trend an-card-stats__trend--up">↑ 12%</span>
+      <span class="an-card-stats__label">vs ayer</span>
+    </div>
+  </article>
+
+  <article class="an-card-stats">
+    <div class="an-card-stats__header">
+      <span class="an-card-stats__title">Citas Pendientes</span>
+      <div class="an-card-stats__icon">👤</div>
+    </div>
+    <h3 class="an-card-stats__value">8</h3>
+    <div class="an-card-stats__footer">
+      <span class="an-card-stats__trend an-card-stats__trend--down">↓ 2</span>
+      <span class="an-card-stats__label">vs semana pasada</span>
+    </div>
+  </article>
+</div>
+  `}
+/>

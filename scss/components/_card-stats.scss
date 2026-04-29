@@ -1,0 +1,93 @@
+@use "sass:map";
+@use "../abstracts/variables" as v;
+@use "../abstracts/colors" as c;
+@use "../abstracts/mixins" as m;
+
+.an-card-stats {
+  // --- Contenedor Principal ---
+  position: relative;
+  padding: 2.4rem;
+  background-color: c.clr("bg", "surface");
+  border: 0.1rem solid c.clr("brand", "secondary");
+  border-radius: v.$radius-md;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  // Acento lateral izquierdo (ADN Anami)
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0.4rem;
+    background-color: c.clr("brand", "primary");
+  }
+
+  &:hover {
+    box-shadow: v.$shadow-soft;
+  }
+
+  // --- Encabezado (Título + Icono) ---
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    @include m.text-style(1.3rem, 600, 1.2);
+    color: c.clr("text", "muted");
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    margin-right: 20px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    background-color: c.clr("brand", "blob");
+    color: c.clr("brand", "primary");
+    border-radius: v.$radius-sm;
+    font-size: 1.8rem;
+  }
+
+  // --- Cuerpo (Valor Principal) ---
+  &__value {
+    @include m.text-style(3.2rem, 700, 1);
+    color: c.clr("text", "main");
+    margin: 0;
+  }
+
+  // --- Pie (Tendencia / Comparativa) ---
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    @include m.text-style(1.2rem, 400, 1);
+  }
+
+  &__trend {
+    font-weight: 700;
+
+    &--up {
+      color: c.clr("feedback", "success");
+    }
+    &--down {
+      color: c.clr("feedback", "danger");
+    }
+  }
+
+  &__label {
+    color: c.clr("text", "light");
+  }
+}
