@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as v;
+
+@each $name, $value in v.$widths {
+  .an-w-#{$name} {
+    width: $value !important;
+  }
+}
+
+// Opcional: Max-width para contenedores
+.an-mw-full {
+  max-width: 100% !important;
+}
+
+@each $name, $value in v.$heights {
+  .an-h-#{$name} {
+    height: $value !important;
+  }
+}
+
+// Útil para layouts que deben ocupar al menos toda la pantalla
+.an-min-h-screen {
+  min-height: 100vh !important;
+}

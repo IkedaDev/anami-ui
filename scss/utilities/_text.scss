@@ -1,0 +1,32 @@
+// scss/utilities/_text.scss
+
+.an-text {
+  &-left {
+    text-align: left !important;
+  }
+  &-center {
+    text-align: center !important;
+  }
+  &-right {
+    text-align: right !important;
+  }
+  &-justify {
+    text-align: justify !important;
+  }
+
+  // Transformaciones útiles
+  &-uppercase {
+    text-transform: uppercase !important;
+  }
+  &-lowercase {
+    text-transform: lowercase !important;
+  }
+  &-capitalize {
+    text-transform: capitalize !important;
+  }
+
+  // No wrap para celdas de tabla críticas
+  &-nowrap {
+    white-space: nowrap !important;
+  }
+}
