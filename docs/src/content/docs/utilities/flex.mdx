@@ -1,0 +1,84 @@
+---
+title: Sistema de Layout (Flex + Sizing)
+description: Guía avanzada para maquetar interfaces usando utilidades de Flexbox y Control de Anchos en Anami UI.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+El layout en Anami UI se basa en la combinación de utilidades **Flexbox** (para alineación y dirección) y **Sizing** (para control de proporciones). Esta metodología permite crear interfaces complejas sin escribir una sola línea de CSS personalizado.
+
+## Dirección y Composición
+
+### Flex Row + Sizing
+
+Ideal para dividir una fila en proporciones exactas.
+
+<Showcase
+  htmlCode={`<div class="an-flex an-gap-4 an-w-full">
+  <div class="an-card an-w-25" style="padding: 1rem; background: #fdfaf7;">25%</div>
+  <div class="an-card an-w-75" style="padding: 1rem; background: #fdfaf7;">75%</div>
+</div>`}
+/>
+
+### Flex Column (Apilamiento vertical)
+
+Útil para formularios o listas de detalles.
+
+<Showcase
+  htmlCode={`<div class="an-flex an-flex-column an-gap-2 an-w-50">
+  <div class="an-pill primary an-w-full">Opción A (Ancho Completo)</div>
+  <div class="an-pill primary an-w-auto">Opción B (Ancho Automático)</div>
+</div>`}
+/>
+
+## Alineación Profesional
+
+### Distribución Espacial (Justify Between)
+
+La forma estándar de crear cabeceras de componentes.
+
+<Showcase
+  htmlCode={`<div class="an-flex an-justify-between an-align-center an-w-full">
+  <h3 class="an-text--h3 an-m-0">Resumen Financiero</h3>
+  <div class="an-flex an-gap-2">
+    <button class="an-button --sm outline">PDF</button>
+    <button class="an-button --sm primary">Ver más</button>
+  </div>
+</div>`}
+/>
+
+## Casos de Uso del Dashboard
+
+### Fila de Formulario Real
+
+Combinación de `an-flex`, `an-gap-4` y `an-w-X` para campos proporcionales.
+
+<Showcase
+  htmlCode={`<div class="an-flex an-gap-4 an-w-full">
+  <div class="an-field an-w-75">
+    <label class="an-label">Nombre del Cliente</label>
+    <input class="an-input" placeholder="Ej: Sebastian Ikeda" />
+  </div>
+  <div class="an-field an-w-25">
+    <label class="an-label">RUT</label>
+    <input class="an-input" placeholder="12.345.678-9" />
+  </div>
+</div>`}
+/>
+
+## Referencia Rápida de Composición
+
+| Clase de Comportamiento | Propósito                                         |
+| :---------------------- | :------------------------------------------------ |
+| `.an-flex`              | Activa el contenedor flexible.                    |
+| `.an-flex-column`       | Cambia a disposición vertical.                    |
+| `.an-w-full`            | Asegura que el elemento ocupe el 100% del padre.  |
+| `.an-gap-4`             | Aplica un espacio estándar de 1.6rem entre hijos. |
+| `.an-justify-center`    | Centra el contenido horizontalmente.              |
+| `.an-align-center`      | Alinea el contenido verticalmente al centro.      |
+
+## Tips de IkedaDev
+
+1.  **Hijos Flexibles:** Si quieres que un elemento crezca para llenar el espacio sobrante en una fila, usa la clase `.an-flex-fill`.
+2.  **Reset de Ancho:** Por defecto, los elementos en un flex-row tienen `width: auto`. Siempre usa las clases `.an-w-X` para forzar proporciones en vistas de escritorio.
+3.  \*\*An

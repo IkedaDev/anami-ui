@@ -1,0 +1,59 @@
+---
+title: Sistema de Anchos (Sizing)
+description: Utilidades para controlar el ancho de los elementos en Anami UI.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+Las clases de ancho siguen el prefijo `.an-w-{valor}`.
+
+## Porcentajes Comunes
+
+Útil para layouts de columnas o inputs de diferentes tamaños.
+
+### Mitad y Completo (w-50, w-100)
+
+<Showcase
+  htmlCode={`<div class="an-flex an-flex-column an-gap-4 an-text--body">
+  <div class="an-card an-w-50" style="background: #D4A373; color: white; padding: 1rem;">an-w-50 (50%)</div>
+  <div class="an-card an-w-100" style="background: #E9EDC6; padding: 1rem;">an-w-100 (100%)</div>
+</div>`}
+/>
+
+### Sistema de Cuartos (w-25, w-75)
+
+<Showcase
+  htmlCode={`<div class="an-flex an-gap-2 an-text--body">
+  <div class="an-card an-w-25" style="border: 1px solid #ccc; padding: 0.5rem;">25%</div>
+  <div class="an-card an-w-75" style="border: 1px solid #ccc; padding: 0.5rem;">75%</div>
+</div>`}
+/>
+
+## Uso en Formularios
+
+Combinando `an-flex` con `an-w-X` para crear filas de campos profesionales.
+
+<Showcase
+  htmlCode={`<div class="an-flex an-gap-4 an-w-full">
+  <div class="an-field an-w-75">
+    <label class="an-field__label">Dirección (75%)</label>
+    <input class="an-field__input" placeholder="Ej: Newen Antu 962" />
+  </div>
+  <div class="an-field  an-w-25">
+    <label class="an-field__label">Nº (25%)</label>
+    <input class="an-field__input" placeholder="123" />
+  </div>
+</div>`}
+/>
+
+## Referencia de Clases
+
+| Clase          | Valor CSS         |
+| :------------- | :---------------- |
+| `.an-w-25`     | `width: 25%;`     |
+| `.an-w-33`     | `width: 33.333%;` |
+| `.an-w-50`     | `width: 50%;`     |
+| `.an-w-75`     | `width: 75%;`     |
+| `.an-w-full`   | `width: 100%;`    |
+| `.an-w-auto`   | `width: auto;`    |
+| `.an-w-screen` | `width: 100vw;`   |

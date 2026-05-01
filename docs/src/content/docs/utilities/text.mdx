@@ -1,0 +1,43 @@
+---
+title: Utilidades de Texto y Altura
+description: Control rápido de alineación y dimensiones verticales.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+## Alineación de Texto
+
+Controla la posición del texto dentro de sus contenedores.
+
+<Showcase
+  htmlCode={`<div class="an-flex an-flex-column an-gap-4">
+  <div class="an-card an-text--body an-text-left">Texto a la izquierda (Default)</div>
+  <div class="an-card an-text--body an-text-center">Texto centrado</div>
+  <div class="an-card an-text--body an-text-right">Texto a la derecha</div>
+</div>`}
+/>
+
+## Altura (Height)
+
+Útil para elementos que deben estirarse verticalmente.
+
+### Pantalla Completa (min-h-screen)
+
+Ideal para la página de Login o Dashboard Layout.
+
+<Showcase
+  htmlCode={`
+<div class="an-min-h-screen an-flex an-justify-center an-align-center" style="background: #f4f4f4;">
+  <div class="an-text--body an-card">Contenido centrado en pantalla completa</div>
+</div>`}
+/>
+
+## Referencia Rápida
+
+| Clase              | Propiedad CSS         |
+| :----------------- | :-------------------- |
+| `.an-text-center`  | `text-align: center;` |
+| `.an-text-right`   | `text-align: right;`  |
+| `.an-h-full`       | `height: 100%;`       |
+| `.an-h-screen`     | `height: 100vh;`      |
+| `.an-min-h-screen` | `min-height: 100vh;`  |

@@ -24,6 +24,10 @@ export default defineConfig({
           label: "Forms",
           autogenerate: { directory: "forms" },
         },
+        {
+          label: "Utilities",
+          autogenerate: { directory: "utilities" },
+        },
       ],
     }),
   ],
