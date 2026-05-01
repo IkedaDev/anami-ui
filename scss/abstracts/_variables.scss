@@ -18,9 +18,12 @@ $radius-pill: 50px; //
 // Sombras
 $shadow-soft: 0 1rem 4rem -1rem rgba(74, 64, 58, 0.08); // 10px 40px -10px
 $shadow-hover: 0 2rem 4rem -0.5rem rgba(196, 127, 107, 0.15); // 20px 40px -5px
+$shadow-lg: 0 2rem 4rem -1rem rgba(196, 127, 107, 0.15); // 20px 40px -5px
 
 // Transiciones
 $transition-base: all 0.3s ease; //
+
+$z-modal: 9999;
 
 // Breakpoints para el Mixin de Responsive
 $breakpoints: (

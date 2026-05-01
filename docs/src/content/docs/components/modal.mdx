@@ -1,0 +1,98 @@
+---
+title: Modal
+description: Componente de diálogo para tareas críticas, edición de formularios y confirmaciones.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+El Modal de **Anami UI** sigue una estética "Square & Clean", utilizando bordes definidos, sombras profundas y un fondo desenfocado para mantener el enfoque en la tarea actual.
+
+## Estructura Base
+
+Un modal se compone de tres secciones principales: Header, Body y Footer.
+
+<Showcase
+  htmlCode={`
+<div style="background: #f4f4f4; padding: 3rem; border-radius: 8px;">
+  <div class="an-modal" style="position: relative; margin: 0 auto; animation: none;">
+    <header class="an-modal__header">
+      <h3 class="an-text--h3 an-m-0">Título del Modal</h3>
+      <button class="an-button">✕</button>
+    </header>
+    
+    <div class="an-modal__body">
+      <p class="an-text--body">Este es el cuerpo del modal donde se coloca el contenido principal o formularios.</p>
+    </div>
+    
+    <footer class="an-modal__footer">
+      <button class="an-button an-button--outline">Cancelar</button>
+      <button class="an-button an-button--primary an-mt-0">Aceptar</button>
+    </footer>
+  </div>
+</div>
+`}
+/>
+
+## Caso de Uso: Formulario de Servicio
+
+Ejemplo de cómo se ve el formulario de creación de servicios dentro de la estructura del modal, utilizando las utilidades de **Flexbox** y **Sizing**.
+
+<Showcase
+  htmlCode={`
+<div style="background: #f4f4f4; padding: 3rem; border-radius: 8px;">
+  <div class="an-modal" style="position: relative; margin: 0 auto; animation: none; max-width: 450px;">
+    <header class="an-modal__header">
+      <h3 class="an-text--h3 an-m-0">Nuevo Servicio</h3>
+      <button class="an-button --icon-only">✕</button>
+    </header>
+    
+    <div class="an-modal__body">
+      <form class="an-flex an-flex-column an-gap-4">
+        <div class="an-field">
+          <label class="an-field__label">Nombre</label>
+          <input class="an-field__input" placeholder="Ej: Masaje Descontracturante" />
+        </div>
+        
+        <div class="an-flex an-gap-4">
+          <div class="an-field an-w-50">
+            <label class="an-field__label">Precio (CLP)</label>
+            <input type="number" class="an-field__input" value="35000" />
+          </div>
+          <div class="an-field an-w-50 an-mt-0">
+            <label class="an-field__label">Duración</label>
+            <select class="an-field__input">
+              <option>30 min</option>
+              <option selected>60 min</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <footer class="an-modal__footer">
+      <button class="an-button an-button--outline">Cancelar</button>
+      <button class="an-button an-button--success an-mt-0">Guardar Servicio</button>
+    </footer>
+  </div>
+</div>
+`}
+/>
+
+## Referencia de Clases BEM
+
+| Clase               | Descripción                                                |
+| :------------------ | :--------------------------------------------------------- |
+| `.an-modal-overlay` | Contenedor oscuro (`backdrop`) que cubre toda la pantalla. |
+| `.an-modal`         | El contenedor principal blanco con sombra.                 |
+| `.an-modal__header` | Cabecera con fondo `brand-blob` y borde inferior.          |
+| `.an-modal__body`   | Espacio acolchado para el contenido.                       |
+| `.an-modal__footer` | Zona inferior alineada a la derecha para acciones.         |
+
+## Variables de Control
+
+El modal utiliza la variable `$z-modal` para asegurar que siempre aparezca por encima de cualquier otro elemento (como el Sidebar o las tablas).
+
+```scss
+// abstracts/_variables.scss
+$z-modal: 1000;
+```
