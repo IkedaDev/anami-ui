@@ -51,3 +51,26 @@ import Showcase from "../../../components/Showcase.astro";
   </table>
 `}
 />
+
+## Estado de Carga (Skeleton)
+
+Para mostrar un estado de carga profesional, simplemente pasa la propiedad `loading` como `true`.
+
+<Showcase
+  htmlCode={`
+    <table class="an-table">
+      <thead class="an-table__header">
+        <tr>
+          <th class="an-table__header-cell">Cliente</th>
+          <th class="an-table__header-cell">Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="an-table__row">
+          <td class="an-table__cell"><div class="an-skeleton an-skeleton--h-sm"></div></td>
+          <td class="an-table__cell"><div class="an-skeleton an-skeleton--h-sm an-skeleton--w-50"></div></td>
+        </tr>
+      </tbody>
+    </table>
+  `}
+/>
