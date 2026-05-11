@@ -21,6 +21,13 @@ $anami-colors: (
     "warning": #e29547,
     "info": #4d8fb1,
   ),
+  "neutral": (
+    "100": #fcfaf9,
+    "200": #f5f0ee,
+    "400": #b5ada9,
+    "800": #4a403a,
+    "900": #2d2622,
+  ),
 );
 
 @function clr($group, $variant: "main") {

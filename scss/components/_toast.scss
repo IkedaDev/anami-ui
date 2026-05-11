@@ -1,0 +1,108 @@
+@use "sass:color";
+@use "../abstracts/variables" as v;
+@use "../abstracts/colors" as c;
+@use "../abstracts/mixins" as m;
+
+// Mixin específico para variantes de Toast
+@mixin toast-variant($state-color) {
+  border-left: 0.4rem solid $state-color;
+
+  .an-toast__icon {
+    color: $state-color;
+  }
+}
+
+.an-toast-container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: v.$z-modal;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 36rem; // Un poco más estrecho que la alerta estándar
+  pointer-events: none;
+}
+
+.an-toast {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.6rem;
+  background-color: white; // Fondo sólido para destacar sobre el contenido
+  border-radius: v.$radius-sm;
+  box-shadow: v.$shadow-lg; // Sombra prominente
+  pointer-events: auto;
+  position: relative;
+  overflow: hidden;
+  animation: toastSlideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  // --- Elementos ---
+  &__icon {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 2rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    @include m.text-style(1.3rem, 400, 1.4);
+    color: c.clr("neutral", "800"); // Color de texto base
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    padding: 0.4rem;
+    cursor: pointer;
+    color: c.clr("neutral", "400");
+    transition: color 0.2s;
+    display: flex;
+
+    &:hover {
+      color: c.clr("neutral", "900");
+    }
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+
+  // --- Variantes ---
+  @include toast-variant(c.clr("brand", "primary"));
+
+  &--success {
+    @include toast-variant(c.clr("feedback", "success"));
+  }
+
+  &--error {
+    @include toast-variant(c.clr("feedback", "danger"));
+  }
+
+  &--warning {
+    @include toast-variant(c.clr("feedback", "warning"));
+  }
+
+  &--info {
+    @include toast-variant(c.clr("feedback", "info"));
+  }
+}
+
+@keyframes toastSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

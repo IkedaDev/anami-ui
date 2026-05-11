@@ -1,0 +1,57 @@
+---
+title: Toasts
+description: Guía completa de uso del componente an-toast de Anami UI.
+---
+
+import Showcase from "../../../components/Showcase.astro";
+
+## Uso Básico
+
+El Toast se utiliza para notificaciones efímeras. Para la documentación, envolvemos el componente en un div con `position: relative` para evitar que flote fuera de la vista previa.
+
+<Showcase
+  htmlCode={`
+  <div class="an-toast">
+    <div class="an-toast__content">
+      Tienes una nueva notificación.
+    </div>
+    <button class="an-toast__close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="12"></line></svg>
+    </button>
+  </div>
+  `}
+/>
+
+## Variantes Semánticas
+
+Utiliza los modificadores `--success`, `--error`, `--warning` e `--info` para comunicar estados específicos.
+
+### Éxito
+
+<Showcase
+  htmlCode={`
+<div class="an-toast an-toast--success">
+  <div class="an-toast__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+  </div>
+  <div class="an-toast__content">
+    La cita ha sido reservada con éxito.
+  </div>
+</div>
+  `}
+/>
+
+### Error o Peligro
+
+<Showcase
+  htmlCode={`
+<div class="an-toast an-toast--error">
+  <div class="an-toast__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+  </div>
+  <div class="an-toast__content">
+    No se pudo conectar con el servidor.
+  </div>
+</div>
+  `}
+/>
