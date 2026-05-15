@@ -142,39 +142,39 @@
 
   // --- TAMAÑO NORMAL (Default) ---
   // 1.2rem (12px) y 1.52rem (15.2px aprox)
-  @include btn-size(1rem 2.4rem, 1.3rem);
 
+  @include btn-size(0.6rem 1.5rem, 1.4rem);
   @include m.respond-to("tablet") {
-    @include btn-size(1rem 2.2rem, 1.2rem);
+    @include btn-size(0.6rem 1.3rem, 1.4rem);
   }
-
   // --- VARIANTES DE TAMAÑO ---
 
   &--sm {
-    @include btn-size(0.6rem 1.5rem, 1.4rem);
+    @include btn-size(0.4rem 1.2rem, 1.4rem);
     @include m.respond-to("tablet") {
-      @include btn-size(0.6rem 1.3rem, 1.3rem);
+      @include btn-size(0.4rem 1.2rem, 1.3rem);
     }
   }
 
   &--lg {
-    @include btn-size(0.8rem 2.5rem, 1.6rem);
+    @include btn-size(1rem 2.4rem, 1.4rem);
+
     @include m.respond-to("tablet") {
-      @include btn-size(0.8rem 2.3rem, 1.5rem);
+      @include btn-size(1rem 2.2rem, 1.2rem);
     }
   }
 
   &--xl {
-    @include btn-size(1rem 3rem, 1.8rem);
+    @include btn-size(1.2rem 2.6rem, 1.4rem);
     @include m.respond-to("tablet") {
-      @include btn-size(1rem 2.8rem, 1.7rem);
+      @include btn-size(1.2rem 2.4rem, 1.4rem);
     }
   }
 
   &--xxl {
-    @include btn-size(1rem 3.5rem, 2rem);
+    @include btn-size(1.4rem 2.8rem, 1.6rem);
     @include m.respond-to("tablet") {
-      @include btn-size(1rem 3.3rem, 1.9rem);
+      @include btn-size(1.4rem 2.6rem, 1.6rem);
     }
   }
 }
